@@ -6,4 +6,4 @@
 <p align="justify"> jOGO EM ANDAMENTO </p>
 
 
-> Status do Projeto: Em desenvolvimento :warning:# Jogo-MabauRunner
+> Status do Projeto: Em desenvolvimento :warning:
