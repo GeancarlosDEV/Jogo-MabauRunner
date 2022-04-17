@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/goal.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Checkpoints/End/End (Idle).png" type="Texture" id=2]
+[ext_resource path="res://Sounds/level_completed.wav" type="AudioStream" id=3]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.298246, 0.482456, 1 )
+colors = PoolColorArray( 0.984375, 0.0307617, 0.0307617, 1, 1, 1, 1, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.524809, 0.242331 ), -0.886821, -0.886821, 0, 0, Vector2( 0.990458, 0.193252 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=5]
+curve = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+gravity = Vector3( 0, 100, 0 )
+initial_velocity = 80.0
+initial_velocity_random = 0.23
+angular_velocity = 100.0
+angular_velocity_random = 0.2
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel = 80.0
+radial_accel_random = 1.0
+angle = 30.0
+angle_random = 0.5
+scale = 2.0
+scale_curve = SubResource( 5 )
+color = Color( 0.984314, 0.992157, 0.0235294, 1 )
+color_ramp = SubResource( 3 )
+hue_variation = 0.21
+hue_variation_random = 1.0
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16.5, 16 )
+
+[node name="goal" type="Area2D"]
+collision_layer = 16
+script = ExtResource( 1 )
+
+[node name="confetti" type="Particles2D" parent="."]
+position = Vector2( 0, -42 )
+scale = Vector2( 2, 2 )
+emitting = false
+amount = 20
+explosiveness = 0.6
+randomness = 0.2
+process_material = SubResource( 6 )
+
+[node name="texture" type="Sprite" parent="."]
+position = Vector2( 0, -32 )
+texture = ExtResource( 2 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -16 )
+shape = SubResource( 1 )
+
+[node name="Victoryfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="body_entered" from="." to="." method="_on_goal_body_entered"]
