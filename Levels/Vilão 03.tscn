@@ -227,7 +227,7 @@ position = Vector2( 654, -70 )
 [node name="goal" parent="." instance=ExtResource( 9 )]
 position = Vector2( 826, 139 )
 scale = Vector2( 0.7, 0.7 )
-path = "res://Levels/Level_06.tscn"
+path = "res://Levels/Level_07.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 40, 46 )
