@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scenes/pineapple.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/Items/Fruits/Strawberry.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Items/Fruits/Collected.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Itens/melon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Items/Fruits/Collected.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Items/Fruits/Strawberry.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Items.gd" type="Script" id=4]
 
 [sub_resource type="StreamTexture" id=1]
 load_path = "res://.import/Orange.png-bb7d8597dca6d8c303d3f634f1abd624.stex"
@@ -20,7 +21,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("apple:hframes")
@@ -73,7 +74,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ) ]
+"values": [ ExtResource( 3 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("apple:hframes")
@@ -89,11 +90,15 @@ tracks/2/keys = {
 }
 
 [node name="strawberry" instance=ExtResource( 1 )]
+collision_layer = 4
+script = ExtResource( 4 )
 
 [node name="apple" parent="." index="0"]
-texture = ExtResource( 2 )
 normal_map = SubResource( 1 )
+hframes = 17
 
 [node name="anim" parent="." index="2"]
+autoplay = "motion"
+playback_speed = 1.5
 anims/collected = SubResource( 3 )
 anims/motion = SubResource( 4 )
