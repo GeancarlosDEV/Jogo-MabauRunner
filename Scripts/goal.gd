@@ -14,3 +14,6 @@ func _on_goal_body_entered(body: Node) -> void:
 		changer.change_scene(path)
 		Global.checkpoint_pos = 0
 		$Victoryfx.play()
+
+
+

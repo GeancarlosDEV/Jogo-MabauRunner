@@ -8,11 +8,11 @@
 [ext_resource path="res://Scenes/Itens/cherries_rig.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Itens/kiwi_rig.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Itens/orange_rig.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Itens/banana.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Itens/apply_rig.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Itens/melon_rig.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Itens/apple_rig.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Itens/banana_rig.tscn" type="PackedScene" id=11]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=6]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -173,8 +173,8 @@ tracks/3/keys = {
 collision_layer = 16
 collision_mask = 0
 script = ExtResource( 3 )
-fruit_instance = [ ExtResource( 11 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 4 ) ]
-fruits = 7
+fruit_instance = [ ExtResource( 9 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 4 ) ]
+fruits = 20
 
 [node name="texture" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -182,7 +182,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 28, 24 )
 
 [node name="collsioon" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 6 )
 
 [node name="anim" type="AnimationPlayer" parent="."]
 autoplay = "default"
@@ -191,4 +191,4 @@ anims/default = SubResource( 3 )
 anims/hit = SubResource( 4 )
 
 [node name="spawnPoint" type="Position2D" parent="."]
-position = Vector2( 0, -14 )
+position = Vector2( 0, -16 )

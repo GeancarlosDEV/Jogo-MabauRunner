@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scenes/Prefabs/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Heroi e cenários/Word/Cenário 01/2 - Hills.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scenes/Objetos/Goal.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Inimigos/Mushroomgreen.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Inimigos/Birdiered.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Objetos/break-box.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Objetos/FallingPlataform.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Objetos/checkpoint.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Objetos/trampoline.tscn" type="PackedScene" id=18]
@@ -135,7 +136,7 @@ position = Vector2( 1123, 171 )
 
 [node name="goal" parent="." instance=ExtResource( 9 )]
 position = Vector2( 2063, 123 )
-path = "res://Levels/Vilão 04.tscn"
+path = "res://Levels/Level_10.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 35, -28 )
@@ -302,6 +303,21 @@ health = 3
 
 [node name="ChainSaw10" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1587, 106 )
+
+[node name="break-box" parent="." instance=ExtResource( 12 )]
+position = Vector2( 529, -91 )
+
+[node name="break-box2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 734, -89 )
+
+[node name="break-box3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 886, -49 )
+
+[node name="break-box4" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1308, -38 )
+
+[node name="break-box5" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1854, -41 )
 
 [connection signal="body_entered" from="fall_zone" to="fall_zone" method="_on_fall_zone_body_entered"]
 

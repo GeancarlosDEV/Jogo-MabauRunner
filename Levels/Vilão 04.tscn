@@ -116,7 +116,7 @@ rotation = -3.14159
 [node name="goal" parent="." instance=ExtResource( 9 )]
 position = Vector2( 834, -117 )
 scale = Vector2( 0.8, 0.8 )
-path = "res://Levels/Level_06.tscn"
+path = "res://Levels/Level_09.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 35, -28 )

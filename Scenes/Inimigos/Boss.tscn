@@ -260,9 +260,8 @@ script = ExtResource( 6 )
 
 [node name="texture" type="Sprite" parent="."]
 position = Vector2( 0, 1.90735e-06 )
-texture = ExtResource( 4 )
-hframes = 5
-frame = 4
+texture = ExtResource( 2 )
+hframes = 9
 
 [node name="anim" type="AnimationPlayer" parent="."]
 anims/angryRun = SubResource( 7 )

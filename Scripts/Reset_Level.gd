@@ -13,3 +13,4 @@ func _on_Trigger_PlayerEntered_Camera():
 
 func _on_Boss_BossDead():
 	$BossCamera.current = false
+

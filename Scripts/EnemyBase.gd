@@ -45,7 +45,7 @@ func _set_animation():
 		$anim.play(anim)
 		
 # warning-ignore:unused_argument
-func _on_hitbox_body_entered(body):
+func _on_hitbox_body_entered(body : Node) -> void:
 	hitted = true
 	health -= 1
 	body.velocity.y = body.jump_force / 2
