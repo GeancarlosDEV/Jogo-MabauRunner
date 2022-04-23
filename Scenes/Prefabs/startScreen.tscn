@@ -8,16 +8,16 @@
 [ext_resource path="res://Assets/Heroi e cenários/Word/Cenário 01/1 - Foreground_scenery.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Heroi e cenários/Word/Cenário 01/5 - Sky_color.png" type="Texture" id=7]
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="Theme" id=5]
@@ -28,10 +28,10 @@ Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
 Button/constants/hseparation = 2
 Button/fonts/font = null
 Button/styles/disabled = null
-Button/styles/focus = SubResource( 1 )
-Button/styles/hover = SubResource( 2 )
-Button/styles/normal = SubResource( 3 )
-Button/styles/pressed = SubResource( 4 )
+Button/styles/focus = SubResource( 7 )
+Button/styles/hover = SubResource( 8 )
+Button/styles/normal = SubResource( 9 )
+Button/styles/pressed = SubResource( 10 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 20
@@ -80,9 +80,6 @@ margin_left = -40.0
 margin_top = -25.0
 margin_right = 40.0
 margin_bottom = 25.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="startBtn" type="Button" parent="controls"]
 margin_right = 90.0

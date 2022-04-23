@@ -55,9 +55,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -104.0
-margin_top = -48.0
-margin_right = 104.0
-margin_bottom = 16.0
+margin_top = -68.0
+margin_right = 106.0
+margin_bottom = 34.0
 custom_colors/font_color = Color( 0.996078, 0.988235, 0.988235, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0.992157, 0.980392, 0.980392, 1 )
@@ -65,7 +65,8 @@ custom_fonts/font = SubResource( 1 )
 text = "Controls
 Walk Left Arrow Left / A
 Walk Right Arrow Right / D
-Jump Spacebar / W"
+Jump / Spacebar 
+pausa / esc"
 align = 1
 
 [node name="returnBtn" type="Button" parent="."]

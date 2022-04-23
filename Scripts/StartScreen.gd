@@ -13,6 +13,7 @@ func _physics_process(_delta):
 		Global.controloff = true
 
 func _on_startBtn_pressed() -> void:
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Levels/Level_01.tscn")
 
 
